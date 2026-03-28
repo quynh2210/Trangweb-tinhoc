@@ -57,7 +57,6 @@
     padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
     background: linear-gradient(to top, var(--bg-color) 70%, transparent);
 }
 
