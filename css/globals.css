@@ -1,0 +1,161 @@
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #ec4899;
+  --bg-color: #f8fafc;
+  --surface-color: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --nav-icon-muted: #64748b; /* For inactive nav items */
+  --nav-icon-active: #0f172a; 
+  
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  
+  --font-family: 'Inter', sans-serif;
+  
+  --transition-fast: 0.15s ease-out;
+  --transition-normal: 0.25s ease-out;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --surface-color: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  --nav-icon-muted: #94a3b8;
+  --nav-icon-active: #000000; /* Contrast black as requested for dark icons */
+}
+
+[data-theme="default"] {
+  /* Explicitly same as root but for theme switching logic */
+  --primary-color: #6366f1;
+  --secondary-color: #ec4899;
+}
+
+[data-theme="minty"] {
+  --primary-color: #2dd4bf;
+  --secondary-color: #fca5a5;
+  --bg-color: #f0fdfa;
+  --surface-color: #ffffff;
+  --border-color: #ccfbf1;
+}
+
+[data-theme="lavender"] {
+  --primary-color: #a78bfa;
+  --secondary-color: #f472b6;
+  --bg-color: #faf5ff;
+  --surface-color: #ffffff;
+  --border-color: #f3e8ff;
+}
+
+[data-theme="peach"] {
+  --primary-color: #fb923c;
+  --secondary-color: #38bdf8;
+  --bg-color: #fff7ed;
+  --surface-color: #ffffff;
+  --border-color: #ffedd5;
+}
+
+[data-theme="rose"] {
+  --primary-color: #fb7185;
+  --secondary-color: #fda4af;
+  --bg-color: #fff1f2;
+  --surface-color: #ffffff;
+  --border-color: #ffe4e6;
+}
+
+[data-theme="sky"] {
+  --primary-color: #38bdf8;
+  --secondary-color: #bae6fd;
+  --bg-color: #f0f9ff;
+  --surface-color: #ffffff;
+  --border-color: #e0f2fe;
+}
+
+[data-theme="cyber"] {
+  --primary-color: #06b6d4;
+  --secondary-color: #ec4899;
+  --bg-color: #020617;
+  --surface-color: #0f172a;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-color: #1e293b;
+  --nav-icon-muted: #94a3b8;
+  --nav-icon-active: #000000;
+}
+
+[data-theme="royal"] {
+  --primary-color: #eab308;
+  --secondary-color: #f43f5e;
+  --bg-color: #fffbeb;
+  --surface-color: #ffffff;
+  --border-color: #fef3c7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Base Animations */
+.fade-in {
+    animation: fadeIn var(--transition-normal) forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 8px;
+    opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4f46e5;
+}
