@@ -51,7 +51,7 @@
 /* Action Modals Position */
 .bottom-actions {
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     left: 0;
     width: 100%;
     padding: 24px;
