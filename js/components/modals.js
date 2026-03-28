@@ -90,12 +90,12 @@ export async function openTaskModal(preselectedQuestId = "general") {
                 
                 <div class="form-group">
                     <label>Reward / Motivation</label>
-                    <input type="text" id="task-reward" placeholder="e.g. Watch 1 ep of Netflix">
+                    <input type="text" id="task-reward" placeholder="Watch 1 ep of Netflix">
                 </div>
                 <div class="form-group">
                     <label>Deadline (Timer)</label>
                     <div style="display:flex; gap:8px;">
-                        <input type="number" id="task-deadline-num" min="1" placeholder="e.g. 2" style="flex:1;" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                        <input type="number" id="task-deadline-num" min="1" placeholder="7" style="width:10px;flex:1;" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                         <select id="task-deadline-unit" style="flex:1;">
                             <option value="min">Minutes</option>
                             <option value="hour">Hours</option>
