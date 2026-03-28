@@ -84,7 +84,7 @@
         justify-content: flex-start;
         align-items: center;
         padding: 80px 40px;
-        overflow-y: auto;
+        overflow-y: scroll;
     }
     
     .onboarding-content {
